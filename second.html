@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <div>
+        <h1>Jquery Revision</h1>
+    </div>
+
+    
+
+<button id="btnhide">Hide</button>
+<button id="btnshow">Show</button>
+<button id="btntoggle">Toggle</button>
+
+
+<input type="text" name="" id="userText" placeholder="Enter Fruits">
+<ul id="myList">
+       
+    </ul>
+
+<button id="btnappend">Append</button>
+<button id="btnprepend">Prepend</button>
+
+
+<script>
+    $(document).ready(function () {
+        
+
+// $("#btnappend").click(function(){
+//     $("#myList").append("<li>Apple</li>")
+// });
+
+// $("#btnprepend").click(function(){
+//     $("#myList").prepend("<li>Orange</li>")
+// });
+
+$("#btnappend").click(function(){
+    var userinput = $("#userText").val();
+    $("#myList").append("<li>" + userinput + "</li>");
+})
+
+
+$("#btnprepend").click(function(){
+    var userinput = $("#userText").val();
+    $("#myList").prepend("<li>" + userinput + "</li>");
+})
+
+        $("div").css({
+            "border" : "2px inset green",
+            "background-color" : "lightblue",
+            "padding" : "20px",
+            "font-size" : "20px",
+            "color" : "blue",
+            "text-align" : "center"
+        })
+
+
+        $("#btnhide").click(function(){
+            $("div").hide(3000);
+        })
+
+        $("#btnshow").click(function(){
+            $("div").show(3000);
+        })
+
+        $("#btntoggle").click(function(){
+            $("div").toggle(3000);
+        })
+        
+       
+        $("div").click(function(){
+            $(this).css({
+                "background-color" : "pink",
+                "color" : "red",
+                "font-size" : "25px"
+            })
+        })
+
+        $("div").mouseenter(function(){
+            $(this).css({
+                "background-color" : "black",
+                "color" : "white",
+                "font-size" : "25px"
+            })
+        })
+        $("div").mouseleave(function(){
+            $(this).css({
+                "background-color" : "lavender",
+                "color" : "maroon",
+                "font-size" : "25px"
+            })
+        })
+        $("div").contextmenu(function(){
+            $(this).css({
+                "background-color" : "green",
+                "color" : "brown",
+                "font-size" : "25px"
+            })
+        })
+        $("div").dblclick(function(){
+            $(this).css({
+                "background-color" : "aqua",
+                "color" : "grey",
+                "font-size" : "25px"
+            })
+        })
+
+
+        // $("body").keydown(function(){
+        //     $("body").css({
+        //         "background-color" : "aqua"
+        //     })
+        // })
+
+        // $("body").keyup(function(){
+        //     $("body").css({
+        //         "background-color" : "yellow"
+        //     })
+        // })
+        // $("body").keypress(function(){
+        //     $("body").css({
+        //         "background-color" : "red"
+        //     })
+        // })
+
+        
+
+
+
+
+    });
+</script>
+
+
+
+
+</body>
+</html>
